@@ -1,0 +1,27 @@
+import { ElevenLabsClient, play } from '@elevenlabs/elevenlabs-js';
+import { Readable } from 'stream';
+import dotenv from "dotenv";
+dotenv.config();
+
+console.log(process.env.ELEVENLABS_API_KEY);
+const elevenlabs = new ElevenLabsClient();
+const audio = await elevenlabs.textToSpeech.convert('JBFqnCBsd6RMkjVDRZzb', {
+  text: 'The first move is what sets everything in motion.',
+  modelId: 'eleven_multilingual_v2',
+  outputFormat: 'mp3_44100_128',
+});
+
+const reader = audio.getReader();
+const stream = new Readable({
+  async read() {
+    const { done, value } = await reader.read();
+    if (done) {
+      this.push(null);
+    } else {
+      this.push(value);
+    }
+  },
+});
+
+await play(stream);
+
