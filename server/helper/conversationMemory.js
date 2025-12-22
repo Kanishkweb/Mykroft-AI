@@ -14,4 +14,5 @@ export function addMessage(sessionId, role, content) {
   if (memory[sessionId].length > 5) {
     memory[sessionId].shift();
   }
+  console.log(memory);
 }
