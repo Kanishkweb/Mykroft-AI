@@ -1,127 +1,137 @@
-project:
-  name: "Mykroft"
-  tagline: "Offline AI Assistant for Smart Environment Control"
+🤖 **Mykroft – Offline AI Assistant for Smart Environments**  
+**Privacy-first | Offline | Sensor-Aware | Edge AI**
 
-description: >
-  Mykroft is a privacy-first, offline-capable AI assistant that understands
-  voice commands and real-time environmental data to control smart devices.
-  It runs locally, ensuring low latency, high reliability, and complete user privacy.
+Mykrot is an offline AI assistant that understands voice commands and real-time environmental data to control smart devices. Unlike cloud-based assistants, Kannu runs locally, ensuring low latency, high reliability, and full user privacy.
 
-features:
-  wake_word_detection:
-    name: "Offline Wake Word Detection"
-    technology: "openWakeWord"
-    highlights:
-      - Fully offline (no cloud dependency)
-      - Trained on 30,000+ hours of data
-      - Wake-up latency less than 0.20 ms
-      - Very low false wake-ups
+---
 
-  ai_brain:
-    name: "Local AI Brain"
-    highlights:
-      - Processes voice commands locally
-      - Makes decisions using sensor context
-      - Supports offline LLM integration
-      - PC acts as the central brain
+## 🚀 **Key Features**
 
-  sensor_awareness:
-    name: "Real-Time Sensor Awareness"
-    sensors:
-      - DHT22 (Temperature & Humidity)
-      - MQ-2 (Smoke)
-      - MQ-6 (Gas)
-      - MQ-7 (Carbon Monoxide)
-      - MQ-135 (Air Quality)
-      - PIR Motion Sensor
+🟢 **Offline Wake Word Detection**
+- Uses **openWakeWord** (open-source)
+- Works **100% offline**
+- Trained on **30,000+ hours** of audio data
+- Wake-up latency **< 0.20 ms**
+- Extremely low false activations
 
-  voice_automation:
-    name: "Voice-Controlled Automation"
-    highlights:
-      - Turn ON/OFF lights and appliances
-      - Relay-based hardware control
-      - ESP32-based execution
+🧠 **Local AI Brain (PC-Based)**
+- PC acts as the central brain
+- Processes commands locally
+- Makes decisions using sensor context
+- No Raspberry Pi required
+- Ready for **offline LLM integration**
 
-  privacy:
-    name: "Privacy First"
-    highlights:
-      - No continuous microphone streaming
-      - All voice processing is local
-      - Works without internet access
+🎙️ **Voice-Controlled Automation**
+- Turn **ON / OFF** lights and appliances
+- Voice commands → AI reasoning → hardware action
+- Controlled using **ESP32 + Relay Module**
 
-architecture:
-  overview:
-    - "Wake Word Detection (openWakeWord)"
-    - "Offline Speech-to-Text"
-    - "Node.js AI Brain"
-    - "ESP32 (Sensors & Relays)"
-    - "Smart Environment Actions"
+🌡️ **Real-Time Sensor Awareness**  
+The assistant understands the environment using live sensor data:
+- **DHT22** – Temperature & Humidity
+- **MQ-2** – Smoke Detection
+- **MQ-6** – Gas Leakage
+- **MQ-7** – Carbon Monoxide
+- **MQ-135** – Air Quality Index (AQI)
+- **PIR Sensor** – Motion Detection
 
-hardware:
-  microcontroller: "ESP32"
-  sensors:
-    - "DHT22 – Temperature & Humidity"
-    - "MQ-2 – Smoke"
-    - "MQ-6 – Gas"
-    - "MQ-7 – Carbon Monoxide"
-    - "MQ-135 – Air Quality"
-    - "PIR – Motion Detection"
-  other_components:
-    - "Relay Module"
-    - "Breadboard"
-    - "Jumper Wires"
-    - "Power Supply"
+🔐 **Privacy-First Architecture**
+- No cloud dependency
+- No continuous audio streaming
+- All voice processing happens locally
+- Works even without internet
 
-software_stack:
-  wake_word: "openWakeWord (Offline)"
-  backend_brain: "Node.js"
-  microcontroller_framework: "Arduino Framework"
-  communication:
-    - "Serial (Current)"
-    - "MQTT (Planned)"
-  speech_processing: "Offline Speech-to-Text"
-  ai_reasoning: "Local LLM (Optional)"
+---
 
-voice_commands:
-  examples:
-    - "Turn on the light"
-    - "Turn off the fan"
-    - "What is the room temperature?"
-    - "What is the humidity level?"
-    - "What is the air quality?"
-    - "Is the room safe?"
+## 🧩 **System Architecture**
+User Voice
+↓
+Wake Word Detection (Offline)
+↓
+Speech-to-Text (Local)
+↓
+AI Brain (PC)
+↓
+Decision Making
+↓
+ESP32 (Wi-Fi)
+↓
+Sensors & Relays
 
-smart_behaviors:
-  - "Alerts when air quality becomes unhealthy"
-  - "Advises actions based on temperature and humidity"
-  - "Detects motion and responds intelligently"
-  - "Gas or smoke detection triggers warnings"
 
-comparison:
-  kannu:
-    offline_wake_word: true
-    sensor_based_reasoning: true
-    privacy_focused: true
-    edge_ai: true
-  traditional_assistants:
-    offline_wake_word: false
-    sensor_based_reasoning: false
-    privacy_focused: false
-    edge_ai: false
+---
 
-use_cases:
-  - "Smart Homes"
-  - "Privacy-Sensitive Environments"
-  - "IoT + AI Research"
-  - "Hackathons and Prototypes"
-  - "Edge AI Applications"
+## 🛠️ **Hardware Used**
+- ESP32 Microcontroller
+- DHT22 Temperature & Humidity Sensor
+- MQ-2, MQ-6, MQ-7, MQ-135 Gas Sensors
+- PIR Motion Sensor
+- Relay Module
+- Breadboard & Jumper Wires
+- USB Microphone
 
-future_enhancements:
-  - "MQTT-based wireless communication"
-  - "Web dashboard for live sensor monitoring"
-  - "Long-term memory and user preferences"
-  - "Mobile app integration"
-  - "Multi-room support"
+---
 
-team:
-  note: "Built with passion for hackathon innovation"
+## 💻 **Software Stack**
+- **Wake Word:** openWakeWord (Offline)
+- **Backend AI Brain:** Node.js / Python
+- **Speech-to-Text:** Offline STT
+- **Microcontroller Framework:** Arduino (ESP32)
+- **Communication:**
+  - Serial (Current)
+  - MQTT (Planned)
+
+---
+
+## 🗣️ **Example Voice Commands**
+- 🟢 “Turn on the light”
+- 🔴 “Turn off the fan”
+- 🌡️ “What is the room temperature?”
+- 💧 “What is the humidity level?”
+- 🌫️ “What is the air quality?”
+- 🚨 “Is the room safe?”
+
+---
+
+## 🧠 **Smart Behaviors**
+- Alerts when air quality becomes unhealthy
+- Advises actions based on temperature & humidity
+- Detects motion and responds intelligently
+- Warns on gas leaks or smoke detection
+
+---
+
+## ⚡ **Why Kannu is Different**
+| Feature                | Kannu | Traditional Assistants |
+|------------------------|-------|------------------------|
+| Offline Wake Word      | ✅ Yes | ❌ No                  |
+| Sensor-Based Reasoning | ✅ Yes | ❌ No                  |
+| Privacy Focused        | ✅ Yes | ❌ No                  |
+| Edge AI                | ✅ Yes | ❌ No                  |
+
+---
+
+## 🎯 **Use Cases**
+- 🏠 Smart Homes
+- 🔐 Privacy-Sensitive Environments
+- 🧪 IoT & AI Research
+- 🏆 Hackathons
+- ⚙️ Edge AI Applications
+
+---
+
+## 🔮 **Future Enhancements**
+- MQTT-based wireless communication
+- Web dashboard for live sensor monitoring
+- Memory & personalized responses
+- Mobile app integration
+- Multi-room support
+- Offline LLM reasoning
+
+---
+
+## 👨‍💻 **Team**
+Built with passion for AI, IoT, and Edge Computing.  
+Designed to redefine smart environments without cloud dependency.
+
+---
