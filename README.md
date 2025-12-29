@@ -1,7 +1,7 @@
 🤖 **Mykroft – Offline AI Assistant for Smart Environments**  
 **Privacy-first | Offline | Sensor-Aware | Edge AI**
 
-Mykrot is an offline AI assistant that understands voice commands and real-time environmental data to control smart devices. Unlike cloud-based assistants, Kannu runs locally, ensuring low latency, high reliability, and full user privacy.
+Mykrot is an offline AI assistant that understands voice commands and real-time environmental data to control smart devices. Unlike cloud-based assistants, Mykroft runs locally, ensuring low latency, high reliability, and full user privacy.
 
 ---
 
@@ -101,8 +101,8 @@ Sensors & Relays
 
 ---
 
-## ⚡ **Why Kannu is Different**
-| Feature                | Kannu | Traditional Assistants |
+## ⚡ **Why Mykroft is Different**
+| Feature                | Mykroft | Traditional Assistants |
 |------------------------|-------|------------------------|
 | Offline Wake Word      | ✅ Yes | ❌ No                  |
 | Sensor-Based Reasoning | ✅ Yes | ❌ No                  |
